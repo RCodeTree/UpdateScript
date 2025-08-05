@@ -4,11 +4,11 @@ import shutil
 import time
 from datetime import datetime
 
-# GitHub API endpoint for the latest release
+# 定义GitHub API的URL，用于获取最新版本信息
 api_url = "https://api.github.com/repos/roflmuffin/CounterStrikeSharp/releases/latest"
 download_dir = "CounterStrikeSharp_linux_releases"
 
-# Create download directory if it doesn't exist
+# 确保下载目录存在
 os.makedirs(download_dir, exist_ok=True)
 
 def fetch_with_retry(url, max_retries=3, delay=60):
